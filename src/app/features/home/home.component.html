@@ -1,0 +1,22 @@
+<ActionBar title="Home"></ActionBar>
+<GridLayout rows="*">
+  <CollectionView
+      colWidth="100%"
+      orientation="vertical"
+      rowHeight="100%"
+      [items]="colors"
+  >
+    <ng-template let-item="item">
+      <StackLayout height="100%" width="100%"
+                   [style.backgroundColor]="item.hex">
+        <Label
+            class="text-white"
+            horizontalAlignment="center"
+            textWrap="true"
+            verticalAlignment="center"
+            [text]="item.hex"
+        ></Label>
+      </StackLayout>
+    </ng-template>
+  </CollectionView>
+</GridLayout>
