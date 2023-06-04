@@ -9,8 +9,12 @@
         <Image src="res://home_icon"></Image>
       </MDTabStripItem>
       <MDTabStripItem>
-        <Label text="Messages"></Label>
-        <Image src="res://messages_icon"></Image>
+        <Label text="Explore"></Label>
+        <Image src="res://explore_icon"></Image>
+      </MDTabStripItem>
+      <MDTabStripItem>
+        <Label text="Notifications"></Label>
+        <Image src="res://notifications_icon"></Image>
       </MDTabStripItem>
       <MDTabStripItem>
         <Label text="Profile"></Label>
@@ -24,7 +28,12 @@
     </MDTabContentItem>
     <MDTabContentItem>
       <GridLayout>
-        <page-router-outlet name="messagesTab"></page-router-outlet>
+        <page-router-outlet name="exploreTab"></page-router-outlet>
+      </GridLayout>
+    </MDTabContentItem>
+    <MDTabContentItem>
+      <GridLayout>
+        <page-router-outlet name="notificationsTab"></page-router-outlet>
       </GridLayout>
     </MDTabContentItem>
     <MDTabContentItem>
