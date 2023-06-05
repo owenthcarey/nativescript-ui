@@ -1,0 +1,36 @@
+<ActionBar title="Profile"></ActionBar>
+<GridLayout rows="*">
+  <CollectionView
+      [items]="colors"
+      [itemTemplateSelector]="templateSelector"
+      [spanSize]="spanSize"
+      colWidth="33%"
+      rowHeight="15%"
+  >
+    <!-- Full-width header template -->
+    <ng-template cvTemplateKey="header" let-item="item">
+      <StackLayout height="100%" [style.backgroundColor]="item.hex">
+        <Label
+            class="text-white"
+            horizontalAlignment="center"
+            textWrap="true"
+            verticalAlignment="center"
+            text="HEADER"
+        ></Label>
+      </StackLayout>
+    </ng-template>
+
+    <!-- 1/3 width cell template -->
+    <ng-template cvTemplateKey="item" let-item="item">
+      <StackLayout height="100%" [style.backgroundColor]="item.hex">
+        <Label
+            class="text-white"
+            horizontalAlignment="center"
+            textWrap="true"
+            verticalAlignment="center"
+            [text]="item.hex"
+        ></Label>
+      </StackLayout>
+    </ng-template>
+  </CollectionView>
+</GridLayout>
