@@ -9,21 +9,22 @@ import { Screen } from '@nativescript/core/platform';
   templateUrl: 'profile.component.html',
 })
 export class ProfileComponent {
-  colors: Color[];
   cellSize: number;
+  cellsPerRow = 3;
+  colors: Color[];
   headerHeight: number;
 
   constructor(private colorService: ColorService) {
     this.colors = this.colorService.generateRandomColors(50);
-    this.cellSize = Screen.mainScreen.widthDIPs / 3;
-    this.headerHeight = (Screen.mainScreen.widthDIPs * 2) / 3;
+    this.cellSize = Screen.mainScreen.widthDIPs / this.cellsPerRow;
+    this.headerHeight = (Screen.mainScreen.widthDIPs * 2) / this.cellsPerRow;
   }
 
-  templateSelector(item: Color, index: number, items: Color[]) {
+  templateSelector = (item: Color, index: number, items: Color[]): string => {
     return index === 0 ? 'header' : 'item';
-  }
+  };
 
-  spanSize(item: Color, index: number, items: Color[]) {
-    return index === 0 ? 3 : 1;
+  spanSize = (item: Color, index: number, items: Color[]): number => {
+    return index === 0 ? this.cellsPerRow : 1;
   }
 }
