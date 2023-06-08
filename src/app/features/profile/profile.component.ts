@@ -1,12 +1,12 @@
-import { Component } from '@angular/core'
-import {Color} from "~/app/core/models/color.model";
-import {ColorService} from "~/app/core/services/color.service";
-import { Screen } from "@nativescript/core/platform";
+import { Component } from '@angular/core';
+import { Color } from '~/app/core/models/color.model';
+import { ColorService } from '~/app/core/services/color.service';
+import { Screen } from '@nativescript/core/platform';
 
 @Component({
   moduleId: module.id,
   selector: 'ns-profile',
-  templateUrl: 'profile.component.html'
+  templateUrl: 'profile.component.html',
 })
 export class ProfileComponent {
   colors: Color[];
@@ -16,7 +16,7 @@ export class ProfileComponent {
   constructor(private colorService: ColorService) {
     this.colors = this.colorService.generateRandomColors(50);
     this.cellSize = Screen.mainScreen.widthDIPs / 3;
-    this.headerHeight = Screen.mainScreen.widthDIPs * 2 / 3;
+    this.headerHeight = (Screen.mainScreen.widthDIPs * 2) / 3;
   }
 
   templateSelector(item: Color, index: number, items: Color[]) {

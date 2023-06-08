@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core'
-import { Routes } from '@angular/router'
-import { NativeScriptRouterModule } from '@nativescript/angular'
+import { NgModule } from '@angular/core';
+import { Routes } from '@angular/router';
+import { NativeScriptRouterModule } from '@nativescript/angular';
 
-import { ItemsComponent } from './item/items.component'
-import { ItemDetailComponent } from './item/item-detail.component'
+import { ItemsComponent } from './item/items.component';
+import { ItemDetailComponent } from './item/item-detail.component';
 
 // const routes: Routes = [
 //   { path: '', redirectTo: '/items', pathMatch: 'full' },
@@ -32,7 +32,9 @@ const routes: Routes = [
   {
     path: 'notifications',
     loadChildren: () =>
-      import('./features/notifications/notifications.module').then((m) => m.NotificationsModule),
+      import('./features/notifications/notifications.module').then(
+        (m) => m.NotificationsModule
+      ),
     outlet: 'notificationsTab',
   },
   {

@@ -1,20 +1,20 @@
 <ActionBar title="Profile"></ActionBar>
 <GridLayout rows="*">
   <CollectionView
-      [items]="colors"
-      [itemTemplateSelector]="templateSelector"
-      [spanSize]="spanSize"
-      [colWidth]="cellSize"
+    [items]="colors"
+    [itemTemplateSelector]="templateSelector"
+    [spanSize]="spanSize"
+    [colWidth]="cellSize"
   >
     <!-- Full-width header template -->
     <ng-template cvTemplateKey="header" let-item="item">
       <StackLayout [height]="headerHeight" [style.backgroundColor]="item.hex">
         <Label
-            class="text-white"
-            horizontalAlignment="center"
-            textWrap="true"
-            verticalAlignment="center"
-            [text]="item.hex"
+          class="text-white"
+          horizontalAlignment="center"
+          textWrap="true"
+          verticalAlignment="center"
+          [text]="item.hex"
         ></Label>
       </StackLayout>
     </ng-template>
@@ -23,11 +23,11 @@
     <ng-template cvTemplateKey="item" let-item="item">
       <StackLayout [height]="cellSize" [style.backgroundColor]="item.hex">
         <Label
-            class="text-white"
-            horizontalAlignment="center"
-            textWrap="true"
-            verticalAlignment="center"
-            [text]="item.hex"
+          class="text-white"
+          horizontalAlignment="center"
+          textWrap="true"
+          verticalAlignment="center"
+          [text]="item.hex"
         ></Label>
       </StackLayout>
     </ng-template>
