@@ -26,5 +26,5 @@ export class ProfileComponent {
 
   spanSize = (item: Color, index: number, items: Color[]): number => {
     return index === 0 ? this.cellsPerRow : 1;
-  }
+  };
 }

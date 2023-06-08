@@ -1,0 +1,36 @@
+<ActionBar title="Explore"></ActionBar>
+<GridLayout rows="*">
+  <CollectionView
+    colWidth="100%"
+    orientation="vertical"
+    rowHeight="15%"
+    [items]="colors"
+    orientation="vertical"
+  >
+    <ng-template let-item="item">
+      <GridLayout rows="*">
+        <CollectionView
+          orientation="horizontal"
+          [items]="item.subColors"
+          colWidth="25%"
+        >
+          <ng-template let-subItem="item">
+            <StackLayout
+              height="100%"
+              width="100%"
+              [style.backgroundColor]="subItem.hex"
+            >
+              <Label
+                class="text-white"
+                horizontalAlignment="center"
+                textWrap="true"
+                verticalAlignment="center"
+                [text]="subItem.hex"
+              ></Label>
+            </StackLayout>
+          </ng-template>
+        </CollectionView>
+      </GridLayout>
+    </ng-template>
+  </CollectionView>
+</GridLayout>
