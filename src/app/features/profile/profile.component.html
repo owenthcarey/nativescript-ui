@@ -4,25 +4,24 @@
       [items]="colors"
       [itemTemplateSelector]="templateSelector"
       [spanSize]="spanSize"
-      colWidth="33%"
-      rowHeight="15%"
+      [colWidth]="cellSize"
   >
     <!-- Full-width header template -->
     <ng-template cvTemplateKey="header" let-item="item">
-      <StackLayout height="100%" [style.backgroundColor]="item.hex">
+      <StackLayout [height]="headerHeight" [style.backgroundColor]="item.hex">
         <Label
             class="text-white"
             horizontalAlignment="center"
             textWrap="true"
             verticalAlignment="center"
-            text="HEADER"
+            [text]="item.hex"
         ></Label>
       </StackLayout>
     </ng-template>
 
     <!-- 1/3 width cell template -->
     <ng-template cvTemplateKey="item" let-item="item">
-      <StackLayout height="100%" [style.backgroundColor]="item.hex">
+      <StackLayout [height]="cellSize" [style.backgroundColor]="item.hex">
         <Label
             class="text-white"
             horizontalAlignment="center"
