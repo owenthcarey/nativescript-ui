@@ -3,8 +3,6 @@ import { NativeScriptModule } from '@nativescript/angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ItemsComponent } from './item/items.component';
-import { ItemDetailComponent } from './item/item-detail.component';
 import { NativeScriptMaterialBottomNavigationModule } from '@nativescript-community/ui-material-bottom-navigation/angular';
 
 @NgModule({
@@ -14,7 +12,7 @@ import { NativeScriptMaterialBottomNavigationModule } from '@nativescript-commun
     AppRoutingModule,
     NativeScriptMaterialBottomNavigationModule,
   ],
-  declarations: [AppComponent, ItemsComponent, ItemDetailComponent],
+  declarations: [AppComponent],
   providers: [],
   schemas: [NO_ERRORS_SCHEMA],
 })
