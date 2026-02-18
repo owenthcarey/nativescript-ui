@@ -6,6 +6,7 @@ import { ColorService } from '~/app/core/services/color.service';
   moduleId: module.id,
   selector: 'ns-explore',
   templateUrl: 'explore.component.html',
+  standalone: false,
 })
 export class ExploreComponent {
   colors: Color[];

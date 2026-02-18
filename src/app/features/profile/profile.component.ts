@@ -7,6 +7,7 @@ import { Screen } from '@nativescript/core/platform';
   moduleId: module.id,
   selector: 'ns-profile',
   templateUrl: 'profile.component.html',
+  standalone: false,
 })
 export class ProfileComponent {
   cellSize: number;

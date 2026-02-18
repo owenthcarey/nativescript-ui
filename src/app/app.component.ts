@@ -5,6 +5,7 @@ import { RouterExtensions } from '@nativescript/angular';
 @Component({
   selector: 'ns-app',
   templateUrl: './app.component.html',
+  standalone: false,
 })
 export class AppComponent {
   constructor(

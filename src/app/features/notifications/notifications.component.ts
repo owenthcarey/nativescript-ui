@@ -6,6 +6,7 @@ import { ColorService } from '~/app/core/services/color.service';
   moduleId: module.id,
   selector: 'ns-notifications',
   templateUrl: 'notifications.component.html',
+  standalone: false,
 })
 export class NotificationsComponent {
   colors: Color[];

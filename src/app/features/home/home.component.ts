@@ -6,6 +6,7 @@ import { ColorService } from '~/app/core/services/color.service';
   moduleId: module.id,
   selector: 'ns-home',
   templateUrl: 'home.component.html',
+  standalone: false,
 })
 export class HomeComponent {
   colors: Color[];
